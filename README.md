@@ -16,4 +16,4 @@ a smooth, coverflow-style 3d slanted wallpaper picker for kde plasma. written in
 just paste this command into your terminal. it will install `pyqt6` (if you are on arch or debian/ubuntu), ask for your wallpapers directory, and set everything up automatically:
 
 ```bash
-curl -sL [https://raw.githubusercontent.com/lamex30/wall-picker/main/install.sh](https://raw.githubusercontent.com/lamex30/wall-picker/main/install.sh) | bash
+curl -sL https://raw.githubusercontent.com/lamex30/wall-picker/main/install.sh | bash
