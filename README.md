@@ -17,16 +17,17 @@ just paste this command into your terminal. it will install `pyqt6` (if you are 
 curl -sL https://raw.githubusercontent.com/lamex30/wall-picker/main/install.sh | bash
 ```
 ## usage
-
 after installation, Wall Picker will be available in your application launcher and krunner.
-    1. scroll / arrow keys: navigate through wallpapers
-    2. left click / enter: apply wallpaper and close
-    3. escape: close without applying
 
-setting a custom shortcut (for kde plasma users)
+- scroll / arrow keys: navigate through wallpapers
+- left click / enter: apply wallpaper and close
+- escape: close without applying
+
+### setting a custom shortcut (for kde plasma users)
 since the installer automatically creates a .desktop file, you can easily bind a global shortcut to launch the picker:
-    1. open system settings -> shortcuts.
-    2. click add new at the bottom -> application.
-    3. search for wall picker and select it.
-    4. assign your preferred shortcut (e.g., meta + w).
-    5. click apply.
+
+1. open system settings -> shortcuts.
+2. click add new at the bottom -> application.
+3. search for wall picker and select it.
+4. assign your preferred shortcut (e.g., meta + w).
+5. click apply.
