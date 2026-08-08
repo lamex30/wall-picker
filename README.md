@@ -1,4 +1,5 @@
 # slanted wall-picker for kde plasma
+<img width="1920" height="1080" alt="screenshot" src="https://github.com/user-attachments/assets/fa23736d-299c-40d1-a651-a715d27e54dc" /> | <img width="480" height="270" alt="video" src="https://github.com/user-attachments/assets/37dedcb0-4249-4f4e-b743-3c04699e34b5" />
 
 a smooth, coverflow-style 3d slanted wallpaper picker for kde plasma. written in python with pyqt6, it runs natively on wayland and x11 without heavy dependencies.
 
@@ -16,7 +17,7 @@ just paste this command into your terminal. it will install `pyqt6` (if you are 
 ```bash
 curl -sL [https://raw.githubusercontent.com/lamex30/wall-picker/main/install.sh](https://raw.githubusercontent.com/lamex30/wall-picker/main/install.sh) | bash
 
-usage
+## usage
 
 after installation, Wall Picker will be available in your application launcher and krunner.
     1. scroll / arrow keys: navigate through wallpapers
