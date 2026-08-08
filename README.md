@@ -31,3 +31,9 @@ since the installer automatically creates a .desktop file, you can easily bind a
 3. search for wall picker and select it.
 4. assign your preferred shortcut (e.g., meta + w).
 5. click apply.
+
+## uninstallation
+if you want to completely remove wall picker from your system, just run:
+
+```bash
+rm -f ~/.local/bin/wall-picker ~/.local/share/applications/wall-picker.desktop
