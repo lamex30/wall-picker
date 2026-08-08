@@ -2,9 +2,9 @@
 import sys
 import os
 import signal
-from PyQt6.QtWidgets import QApplication, QWidget
+from PyQt6.QtWidgets import QApplication, QWidget, QHBoxLayout
 from PyQt6.QtGui import QPainter, QPainterPath, QPixmap, QColor, QPen, QCursor, QImageReader, QImage
-from PyQt6.QtCore import Qt, QPropertyAnimation, pyqtProperty, QEasingCurve, QSize, QThread, pyqtSignal
+from PyQt6.QtCore import Qt, QPropertyAnimation, pyqtProperty, QEasingCurve, QSize, QThread, pyqtSignal, QParallelAnimationGroup, QPoint
 
 # возвращаем стандартное поведение Ctrl+C в терминале
 signal.signal(signal.SIGINT, signal.SIG_DFL)
@@ -93,7 +93,8 @@ class SlantedCard(QWidget):
 class WallPicker(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowFlags(Qt.WindowType.FramelessWindowHint | Qt.WindowType.WindowStaysOnTopHint | Qt.WindowType.Tool)
+        # Убрали Tool, чтобы wayland не резал фуллскрин
+        self.setWindowFlags(Qt.WindowType.FramelessWindowHint | Qt.WindowType.WindowStaysOnTopHint)
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
         self.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
         
@@ -116,6 +117,7 @@ class WallPicker(QWidget):
         walls.sort()
 
         self.cards = []
+        self.h_layout = QHBoxLayout() # заглушка для совместимости со старым кодом
         for w in walls:
             card = SlantedCard(w, self)
             card.show()
@@ -215,12 +217,18 @@ class WallPicker(QWidget):
             QApplication.quit()
 
 if __name__ == '__main__':
+    # принудительно говорим qt использовать wayland
+    os.environ["QT_QPA_PLATFORM"] = "wayland"
+
     app = QApplication(sys.argv)
-    
+    app.setDesktopSettingsAware(False)
+
     if not os.path.exists(WALLS_DIR):
         print(f"Ошибка: папка с обоями не найдена ({WALLS_DIR})")
         sys.exit(1)
         
     picker = WallPicker()
     picker.showFullScreen()
+    picker.raise_()
+    picker.activateWindow()
     sys.exit(app.exec())
