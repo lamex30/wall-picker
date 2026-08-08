@@ -12,10 +12,7 @@ else
   echo "unsupported package manager. please install pyqt6 manually."
 fi
 
-echo ""
-echo -n "enter the full path to your wallpapers directory: "
-exec < /dev/tty
-read WALL_PATH
+read -p "enter the full path to your wallpapers directory: " WALL_PATH </dev/tty
 
 mkdir -p ~/.local/bin
 mkdir -p ~/.local/share/applications
