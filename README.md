@@ -1,4 +1,6 @@
 # slanted wall-picker for kde plasma
+<img width="1920" height="1080" alt="screenshot" src="https://github.com/user-attachments/assets/6d81398e-571a-43d4-87bc-1305fca3888c" />
+<img width="480" height="270" alt="video" src="https://github.com/user-attachments/assets/b65fe0c2-a93c-4759-ae20-1598fe30678a" />
 
 a smooth, coverflow-style 3d slanted wallpaper picker for kde plasma. written in python with pyqt6, it runs natively on wayland and x11 without heavy dependencies.
 
