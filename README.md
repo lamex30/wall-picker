@@ -18,10 +18,10 @@ curl -sL https://raw.githubusercontent.com/lamex30/wall-picker/main/install.sh |
 ```
 ## usage
 
-after installation, Wall Picker will be available in your application launcher and krunner.
-    1. scroll / arrow keys: navigate through wallpapers
-    2. left click / enter: apply wallpaper and close
-    3. escape: close without applying
+after installation, Wall Picker will be available in your application launcher and krunner. \
+    1. scroll / arrow keys: navigate through wallpapers \
+    2. left click / enter: apply wallpaper and close \
+    3. escape: close without applying \
 
 setting a custom shortcut (for kde plasma users)
 since the installer automatically creates a .desktop file, you can easily bind a global shortcut to launch the picker:
