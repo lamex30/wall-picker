@@ -13,8 +13,9 @@ else
 fi
 
 echo ""
-echo -n "enter the full path to your wallpapers directory (e.g., ~/Pictures/Wallpapers): "
-read WALL_PATH </dev/tty
+echo -n "enter the full path to your wallpapers directory: "
+exec < /dev/tty
+read WALL_PATH
 
 mkdir -p ~/.local/bin
 mkdir -p ~/.local/share/applications
