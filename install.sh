@@ -20,7 +20,7 @@ mkdir -p ~/.local/bin
 mkdir -p ~/.local/share/applications
 
 echo "downloading the script..."
-curl -sL https://raw.githubusercontent.com/lamex30/wall-picker/main/wall-picker.py -o ~/.local/bin/wall-picker
+curl -sL https://raw.githubusercontent.com/lamex30/wall-picker/refs/heads/main/wall-picker.py -o ~/.local/bin/wall-picker
 
 sed -i "s|WALLS_DIR = .*|WALLS_DIR = os.path.expanduser(\"$WALL_PATH\")|g" ~/.local/bin/wall-picker
 chmod +x ~/.local/bin/wall-picker
